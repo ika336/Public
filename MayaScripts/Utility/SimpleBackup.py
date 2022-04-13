@@ -14,7 +14,7 @@ class SimpleBackup :
 		)
 		lo = formLayout()
 		af, ac, an = [], [], []
-		self.memo = scrollField( editable=True, wordWrap=False, text="Dexcription..." )
+		self.memo = scrollField( editable=True, wordWrap=False, text="Description..." )
 		af += [(self.memo,"left",5), (self.memo,"right",5), (self.memo,"top",5)]
 		btn = button(l="Backup", c=self.OnClicked_Backup)
 		af += [(btn,"left",5), (btn,"right",5), (btn,"bottom",5)]
@@ -37,7 +37,7 @@ class SimpleBackup :
 		try :
 			fp = open(os.path.join(backupFolder, descName), "wt")
 		except :
-			print "error"
+			print("error")
 			return
 		fp.write(scrollField(self.memo, q=True, tx=True))
 		fp.close()
