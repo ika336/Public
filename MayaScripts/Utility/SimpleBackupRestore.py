@@ -59,7 +59,7 @@ class SimpleBackupRestore :
 			sMemo = fp.read()
 			fp.close()
 		except :
-			print "Faild to open .txt"
+			print("Faild to open .txt")
 		scrollField(self.memo, e=True, tx=sMemo)
 		return True
 	def OnChanged_File(self, *args) :
@@ -70,7 +70,7 @@ class SimpleBackupRestore :
 			sMemo = fp.read()
 			fp.close()
 		except :
-			print "Faild to open .txt"
+			print("Faild to open .txt")
 		scrollField(self.memo, e=True, tx=sMemo)
 	def OnClicked_Restore(self, *args) :
 		memoName = self.memoFiles[textScrollList(self.lsFile, q=True, sii=True)[0]-1]
